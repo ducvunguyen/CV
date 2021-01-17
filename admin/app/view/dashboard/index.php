@@ -3,7 +3,7 @@
     include 'app/view/layout/side_bar.php';
 ?>
 <div class="all-content-wrapper">
-    <?php include 'app/view/layout/menu_header.php'; ?>
+    <?php include 'app/view/layout/header.php'; ?>
     <br>
     <div class="calender-area mg-tb-30">
         <div class="container-fluid">

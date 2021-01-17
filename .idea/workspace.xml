@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="53602c6b-a7e1-443d-be4c-4931b1e4b8d7" name="Default Changelist" comment="" />
+    <list default="true" id="53602c6b-a7e1-443d-be4c-4931b1e4b8d7" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/app/controller/DashboardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/app/controller/DashboardController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/app/controller/DashboardController.php-tmp" beforeDir="false" afterPath="$PROJECT_DIR$/admin/app/controller/ProfileController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/app/controller/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/app/controller/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/app/model/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/app/model/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/app/route/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/app/route/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/app/view/dashboard/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/app/view/dashboard/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/app/view/dashboard/index.php-tmp" beforeDir="false" afterPath="$PROJECT_DIR$/admin/app/view/profile/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/app/view/layout/side_bar.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/app/view/layout/side_bar.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,6 +20,9 @@
   <component name="ComposerSettings">
     <execution />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1mRw29rUG9zfVzGrqPmwwdBiSp6" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -17,8 +30,9 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -52,28 +66,22 @@
       <workItem from="1609548553008" duration="415000" />
       <workItem from="1609555123483" duration="456000" />
       <workItem from="1610895462489" duration="787000" />
+      <workItem from="1610898451680" duration="7615000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="WindowStateProjectService">
-    <state x="733" y="342" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1609507231825">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state x="733" y="342" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1609507231825" />
-    <state x="437" y="53" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1609476090281">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state x="437" y="53" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1609476090281" />
-    <state x="740" y="295" key="FileChooserDialogImpl" timestamp="1609548974066">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state x="740" y="295" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1609548974066" />
-    <state x="461" y="185" key="SettingsEditor" timestamp="1609487347789">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state x="461" y="185" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1609487347789" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

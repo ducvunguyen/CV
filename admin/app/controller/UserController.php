@@ -7,8 +7,8 @@ class UserController {
     private $userModel;
     function __construct()
     {
-        if (!isset($_SESSION['username']))
-            return header('Location: ?c=login');
+//        if (!isset($_SESSION['username']))
+//            return header('Location: ?c=login');
         $this->userModel = new User();
     }
 

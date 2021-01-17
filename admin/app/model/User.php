@@ -65,6 +65,42 @@ class User extends DataBase{
 
         return $infoUser;
     }
+
+    public function getUserById(){
+        $infoUser = null;
+        $userID = $_SESSION['id'];
+        $sql = "SELECT * FROM users as a where a.id = :userId limit 1";
+
+        $stmt = $this->pd->prepare($sql);
+
+        if ($stmt){
+            $stmt->bindParam(':userId', $userID, PDO::PARAM_STR);
+            if ($stmt->execute())
+                $infoUser = $stmt->fetch(PDO::FETCH_ASSOC);
+
+            $stmt->closeCursor();
+        }
+
+        return $infoUser;
+    }
+
+    function getSkillByUserId(){
+        $listSkill = [];
+        $userID = $_SESSION['id'];
+        $sql = "SELECT * FROM skills as a where a.userId = :userId";
+
+        $stmt = $this->pd->prepare($sql);
+
+        if ($stmt){
+            $stmt->bindParam(':userId', $userID, PDO::PARAM_STR);
+            if ($stmt->execute())
+                $listSkill = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+            $stmt->closeCursor();
+        }
+
+        return $listSkill;
+    }
 }
 ?>
 

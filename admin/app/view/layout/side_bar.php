@@ -6,7 +6,7 @@
         </div>
         <div class="nalika-profile">
             <div class="profile-dtl">
-                <a href="#"><img src="https://ecomedic.vn/img/temp/ava-khachhang-5.jpeg" alt="" /></a>
+                <a href="?c=profile"><img src="https://ecomedic.vn/img/temp/ava-khachhang-5.jpeg" alt="" /></a>
                 <h2><?php echo $_SESSION['fullname']?></h2>
             </div>
             <div class="profile-social-dtl">
@@ -37,6 +37,7 @@
                             <li><a title="Register" href="register.html"><span class="mini-sub-pro">Register</span></a></li>
                             <li><a title="Lock" href="lock.html"><span class="mini-sub-pro">Lock</span></a></li>
                             <li><a title="Password Recovery" href="password-recovery.html"><span class="mini-sub-pro">Password Recovery</span></a></li>
+                            <li><a title="Password Recovery" href="?c=dashboard&d=logout"><span class="mini-sub-pro">Logout</span></a></li>
                         </ul>
                     </li>
                 </ul>
