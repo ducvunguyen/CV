@@ -4,7 +4,7 @@ define('BASE_PATH_ADMIN', 'admin/index.php');
 
 class Route {
     public function __construct(){
-        if(!isset($_SESSION['username'])) return;
+        if(!isset($_SESSION['username'])) return $this->login();
     }
 
     public function login(){
@@ -16,7 +16,7 @@ class Route {
     }
 
     public function profile(){
-        require 'app/controller/ProfileController.php';
+         require 'app/controller/ProfileController.php';
     }
 
     function __call($r,$q){
