@@ -6,6 +6,7 @@ use App\Model\User;
 class  ProfileController{
     private $user;
     public function __construct(){
+        if(!isset($_SESSION['username'])) return header('Location:?c=login');
         $this->user = new User();
     }
 

@@ -3,8 +3,8 @@ namespace App\Controller;
 if(!defined('BASE_PATH_ADMIN')){
     die('Ban khong co quyen truy cap');
 }
-require 'app/model/User.php';
-use app\model\User;
+require 'app/model/User.php'; // goi den file php chua class can su dung
+use app\model\User; //goi class de su dung
 
 class LoginController{
     private $userModel;

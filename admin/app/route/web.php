@@ -4,7 +4,7 @@ define('BASE_PATH_ADMIN', 'admin/index.php');
 
 class Route {
     public function __construct(){
-        if(!isset($_SESSION['username'])) return $this->login();
+//        if(!isset($_SESSION['username'])) return $this->login();
     }
 
     public function login(){

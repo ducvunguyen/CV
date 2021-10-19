@@ -17,8 +17,9 @@ class User extends DataBase{
 
     public function checkLogin($username, $password){
         $data = [];
-        $sql = "SELECT * FROM users as a 
-                where a.username = :username and a.password = :password and a.role = 1 LIMIT 1";
+        $sql = "SELECT * FROM admins as a 
+                where a.username = :username and a.password = :password LIMIT 1";
+
         $stmt = $this->pd->prepare($sql);
         if ($stmt){
             $stmt->bindParam(':username', $username, PDO::PARAM_STR);

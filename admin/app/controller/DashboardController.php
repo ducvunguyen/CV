@@ -9,6 +9,8 @@ class DashboardController{
 
     public function __construct()
     {
+//        if(!isset($_SESSION['username'])) return $this->login();
+        if(!isset($_SESSION['username'])) return header('Location:?c=login');
         $this->userModel = new User();
     }
 

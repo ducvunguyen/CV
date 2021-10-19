@@ -15,7 +15,7 @@ class DataBase {
     protected function connect()
     {
         try {
-            $this->pd = new PDO('mysql:host=localhost;dbname=cv;charset=utf8','root','');
+            $this->pd = new PDO('mysql:host=localhost;dbname=btl;charset=utf8','root','');
             return $this->pd;
         } catch(PDOException $e){
             // co loi toi se in ra de xem

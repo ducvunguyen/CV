@@ -9,6 +9,7 @@ class UserController {
     {
 //        if (!isset($_SESSION['username']))
 //            return header('Location: ?c=login');
+        if(!isset($_SESSION['username'])) return header('Location:?c=login');
         $this->userModel = new User();
     }
 
