@@ -1,15 +1,14 @@
 <?php
 namespace App\Controller;
-
 require 'app/model/User.php';
 use app\Model\User;
+use http\Client\Response;
 
 class DashboardController{
     private $userModel;
 
     public function __construct()
     {
-//        if(!isset($_SESSION['username'])) return $this->login();
         if(!isset($_SESSION['username'])) return header('Location:?c=login');
         $this->userModel = new User();
     }
@@ -32,6 +31,33 @@ class DashboardController{
     public function create()
     {
         return require 'app/view/dashboard/dialogs/dialog_user_form.php';
+    }
+
+    function store(){
+        $username = $_POST['username'];
+        $password = $_POST['password'];
+        $fullName = $_POST['fullname'];
+        if ($username == null) return $this->response('Tên tài khoản không có được để trông', 0);
+        if ($password == null) return $this->response('Mật khẩu không có được để trông', 0);
+        if ($fullName == null) return $this->response('Mật khẩu không có được để trông', 0);
+        $saveUser = $this->userModel->store($_POST);
+        if ($saveUser)
+            return $this->response('Thêm thành công', 1);
+
+        return $this->response('Thêm thất bại');
+    }
+
+    function response($message, $status = 0){ // status = 1 thanh cong // 0 that bai
+        echo $status;
+    }
+
+    function destroy(){
+        $userId = $_POST['id'];
+        $deleteUser = $this->userModel->destroy($userId);
+
+        if ($deleteUser) return $this->response('Xóa thành công', 1);
+        return $this->response('Xóa thất bại');
+
     }
 
     public function logout(){

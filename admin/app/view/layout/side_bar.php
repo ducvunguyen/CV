@@ -6,29 +6,18 @@
         </div>
         <div class="nalika-profile">
             <div class="profile-dtl">
-                <a href="?c=profile"><img src="https://ecomedic.vn/img/temp/ava-khachhang-5.jpeg" alt="" /></a>
+                <a href="?c=profile"><img src="https://t4.ftcdn.net/jpg/03/46/93/61/360_F_346936114_RaxE6OQogebgAWTalE1myseY1Hbb5qPM.jpg" alt="" /></a>
                 <h2><?php echo $_SESSION['fullname']?></h2>
-            </div>
-            <div class="profile-social-dtl">
-                <ul class="dtl-social">
-                    <li><a href="#"><i class="icon nalika-facebook"></i></a></li>
-                    <li><a href="#"><i class="icon nalika-twitter"></i></a></li>
-                    <li><a href="#"><i class="icon nalika-linkedin"></i></a></li>
-                </ul>
             </div>
         </div>
         <div class="left-custom-menu-adp-wrap comment-scrollbar">
             <nav class="sidebar-nav left-sidebar-menu-pro">
                 <ul class="metismenu" id="menu1">
                     <li class="active">
-                        <a class="has-arrow" href="index.html">
+                        <a  href="<?php echo INDEX_PATH?>">
                             <i class="icon nalika-home icon-wrap"></i>
-                            <span class="mini-click-non">Ecommerce</span>
+                            <span class="mini-click-non">Người dùng</span>
                         </a>
-                        <ul class="submenu-angle" aria-expanded="true">
-                            <li><a title="Dashboard v.1" href="#"><span class="mini-sub-pro">Dashboard v.1</span></a></li>
-
-                        </ul>
                     </li>
 
                     <li id="removable">

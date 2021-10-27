@@ -35,15 +35,11 @@ class User extends DataBase{
 
     public function getAllUser(){
         $data = [];
-        $sql = "SELECT b.id, b.fullname, email, address, birthday, a.name_user_skill, c.name_skill, c.process 
-                FROM skill_users as a 
-                inner join users as b on a.id = b.skill_user_id 
-                inner join skills as c on a.id = c.skill_user_id";
+        $sql = "SELECT * FROM admins";
         $stmt = $this->pd->prepare($sql);
         if ($stmt->execute())
             $data = $stmt->fetchAll(PDO::FETCH_ASSOC);
         $stmt->closeCursor();
-
         return $data;
     }
 
@@ -101,6 +97,41 @@ class User extends DataBase{
         }
 
         return $listSkill;
+    }
+
+    function store($data = null){
+        $checkSave = false;
+        if ($data != null){
+            $username = $data['username'];
+            $password = md5($data['password']);
+            $fullname = $data['fullname'];
+            $code = $data['code'];
+            $sql = "INSERT INTO `admins` (`username`, `password`, `code`, `fullname`) VALUES (:username, :password, :code, :fullname)";
+            $stmt = $this->pd->prepare($sql);
+            if ($stmt){
+                $stmt->bindParam(':username', $username, PDO::PARAM_STR);
+                $stmt->bindParam(':password', $password, PDO::PARAM_STR);
+                $stmt->bindParam(':fullname', $fullname, PDO::PARAM_STR);
+                $stmt->bindParam(':code', $code, PDO::PARAM_STR);
+                if ($stmt->execute()) $checkSave = true;
+                $stmt->closeCursor();
+            }
+        }
+
+        return $checkSave;
+    }
+
+    function destroy($userId = null){
+        $checkDelete = false; //false là chua xoa, true xoa thanh cong
+        $sql = "DELETE FROM `admins` WHERE id = :id";
+        $stmt = $this->pd->prepare($sql);
+        if ($stmt) {
+            $stmt->bindParam(':id', $userId, PDO::PARAM_INT);
+            if ($stmt->execute()) $checkDelete = true;
+            echo $checkDelete;
+            $stmt->closeCursor();
+        }
+        return $checkDelete;
     }
 }
 ?>

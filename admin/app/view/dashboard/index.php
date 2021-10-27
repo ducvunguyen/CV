@@ -22,7 +22,7 @@
 </div>
 <?php require 'app/libs/BaseCrud.php'?>
 <script>
-    BaseCrud.init('?c=dashboard&d=loadDataItems', '?c=dashboard&d=show', '?c=dashboard&d=create');
+    BaseCrud.init('?c=dashboard&d=loadDataItems', '?c=dashboard&d=show', '?c=dashboard&d=create', '?c=dashboard&d=store');
 </script>
 <!-- jquery
     ============================================ -->

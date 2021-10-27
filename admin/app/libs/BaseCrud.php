@@ -58,10 +58,9 @@
             });
         },
 
-        create: function(paramUrl = null){
+        create: function(paramUrl = null){ // se dung de show modal cho tao bat ky data nao vao db
             let url = paramUrl;
             if (paramUrl === null) url = this._urlCreate;
-            console.log(url);
             $.ajax({
                 url: url,
                 type: 'GET',
@@ -74,6 +73,42 @@
                     toastr.error('Có lỗi xảy ra !!!');
                 }
             });
+        },
+        store: function (paramUrl = null){
+            let url = paramUrl;
+            if (paramUrl === null) url = this._urlStore;
+            $.ajax({
+                url: url,
+                type: 'POST',
+                data: $('#data-upload').serialize(),
+                success: function (res){
+                    if (res == 0) toastr.error('Thêm thất bại');
+                    else {
+                        toastr.success('Thêm thành công');
+                        $('#modal-form').modal('hide');
+                        BaseCrud.loadDataItems();
+                    }
+                }
+            });
+        },
+        destroy: function (id = null, paramUrl = null){
+            if (id === null) return toastr.error('Id đang rỗng');
+            let url = paramUrl;
+            console.log(paramUrl)
+            if (paramUrl === null) url = this._urlDestroy;
+            $.ajax({
+                url: url,
+                type: 'POST',
+                data: {id},
+                success: function (res){
+                    if (res == 0) return toastr.error('Xóa thất bại');
+                    toastr.success('Xóa thành công');
+                    BaseCrud.loadDataItems();
+
+                }, error: function (err){
+                    toastr.error('Có lỗi xảy ra');
+                }
+            })
         }
     }
 </script>

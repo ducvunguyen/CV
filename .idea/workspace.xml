@@ -3,7 +3,17 @@
   <component name="ChangeListManager">
     <list default="true" id="53602c6b-a7e1-443d-be4c-4931b1e4b8d7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/app/route/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/app/route/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/app/config/constant.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/app/config/constant.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/app/controller/DashboardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/app/controller/DashboardController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/app/controller/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/app/controller/LoginController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/app/controller/ProfileController.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/app/controller/ProfileController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/app/libs/BaseCrud.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/app/libs/BaseCrud.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/app/model/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/app/model/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/app/view/dashboard/datatable.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/app/view/dashboard/datatable.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/app/view/dashboard/dialogs/dialog_user_form.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/app/view/dashboard/dialogs/dialog_user_form.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/app/view/dashboard/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/app/view/dashboard/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/app/view/layout/side_bar.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/app/view/layout/side_bar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,14 +35,15 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="nodejs_package_manager_path" value="yarn" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -60,6 +71,9 @@
       <workItem from="1609555123483" duration="456000" />
       <workItem from="1610895462489" duration="787000" />
       <workItem from="1610898451680" duration="8753000" />
+      <workItem from="1634649390871" duration="180000" />
+      <workItem from="1634656028411" duration="4407000" />
+      <workItem from="1635341461063" duration="13034000" />
     </task>
     <servers />
   </component>
@@ -76,5 +90,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

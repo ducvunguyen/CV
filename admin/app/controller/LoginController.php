@@ -38,12 +38,7 @@ class LoginController{
 
         $_SESSION['id'] = $infoUser['id'];
         $_SESSION['username'] = $infoUser['username'];
-        $_SESSION['fullname'] = $infoUser['fullname'];
-        $_SESSION['address'] = $infoUser['address'];
-        $_SESSION['birthday'] = $infoUser['birthday'];
-        $_SESSION['avatar'] = $infoUser['avatar'];
-        $_SESSION['role'] = $infoUser['role'];
-        $_SESSION['email'] = $infoUser['email'];
+        $_SESSION['code'] = $infoUser['code'];
 
         return header('Location:?c=dashboard');
     }
