@@ -19,6 +19,10 @@ class Route {
          require 'app/controller/ProfileController.php';
     }
 
+    function document(){
+        require 'app/controller/DocumentController.php';
+    }
+
     function __call($r,$q){
         echo "NOT FOUND PAGE";
     }

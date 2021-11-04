@@ -3,4 +3,5 @@
     define('APP_ROOT', 'index.php');
     define('DEBUG',false);
     define('INDEX_PATH', '?c=dashboard');
+    define('DOCUMENT_PATH', '?c=document')
 ?>

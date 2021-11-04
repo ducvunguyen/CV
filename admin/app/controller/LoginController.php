@@ -39,6 +39,7 @@ class LoginController{
         $_SESSION['id'] = $infoUser['id'];
         $_SESSION['username'] = $infoUser['username'];
         $_SESSION['code'] = $infoUser['code'];
+        $_SESSION['fullname'] = $infoUser['fullname'];
 
         return header('Location:?c=dashboard');
     }

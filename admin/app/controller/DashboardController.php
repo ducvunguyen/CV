@@ -33,6 +33,18 @@ class DashboardController{
         return require 'app/view/dashboard/dialogs/dialog_user_form.php';
     }
 
+    function showModalEdit(){
+        $idUser = $_POST['id'];
+        $infoUser = $this->userModel->getInfoUserById($idUser);
+        return require 'app/view/dashboard/dialogs/dialog_user_update_form.php';
+    }
+
+    function update(){
+        $save = $this->userModel->update($_GET['id'], $_POST);
+        if ($save) return $this->response('Cập nhật thành công', 1);
+        return $this->response('Cập nhật thất bại');
+    }
+
     function store(){
         $username = $_POST['username'];
         $password = $_POST['password'];

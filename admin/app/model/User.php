@@ -45,11 +45,8 @@ class User extends DataBase{
 
     public function getInfoUserById($userId) {
         $infoUser = [];
-        $sql = "SELECT b.id, b.fullname, email, address, birthday, a.name_user_skill, c.name_skill, c.process 
-                FROM skill_users as a 
-                inner join users as b on a.id = b.skill_user_id 
-                inner join skills as c on a.id = c.skill_user_id 
-                where b.id = :userId Limit 1";
+        $sql = "SELECT *
+                FROM admins where id = :userId Limit 1";
 
         $stmt = $this->pd->prepare($sql);
         if ($stmt){
@@ -66,7 +63,7 @@ class User extends DataBase{
     public function getUserById(){
         $infoUser = null;
         $userID = $_SESSION['id'];
-        $sql = "SELECT * FROM users as a where a.id = :userId limit 1";
+        $sql = "SELECT * FROM admins as a where a.id = :userId limit 1";
 
         $stmt = $this->pd->prepare($sql);
 
@@ -118,6 +115,24 @@ class User extends DataBase{
             }
         }
 
+        return $checkSave;
+    }
+
+    function update($id = null, $data = null) {
+        $fullname = $data['fullname'];
+        $code = $data['code'];
+        $username = $data['username'];
+        $checkSave = false;
+        $sql = "UPDATE admins SET fullname = :fullname, code = :code, username = :username WHERE id = :id";
+        $stmt = $this->pd->prepare($sql);
+        if ($stmt){
+            $stmt->bindParam(':fullname', $fullname, PDO::PARAM_STR);
+            $stmt->bindParam(':code', $code, PDO::PARAM_STR);
+            $stmt->bindParam(':username', $username, PDO::PARAM_STR);
+            $stmt->bindParam(':id', $id, PDO::PARAM_STR);
+            if ($stmt->execute()) $checkSave = true;
+            $stmt->closeCursor();
+        }
         return $checkSave;
     }
 

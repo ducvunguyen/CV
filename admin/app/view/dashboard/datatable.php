@@ -26,7 +26,7 @@
                     </button>
                 </td>
                 <td>
-                    <button class="btn btn-warning">
+                    <button class="btn btn-warning" onclick="BaseCrud.showFormEdit(<?php echo $item['id']?>, '?c=dashboard&d=showModalEdit')">
                         <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                     </button>
                 </td>

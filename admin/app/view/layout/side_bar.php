@@ -15,20 +15,17 @@
                 <ul class="metismenu" id="menu1">
                     <li class="active">
                         <a  href="<?php echo INDEX_PATH?>">
-                            <i class="icon nalika-home icon-wrap"></i>
                             <span class="mini-click-non">Người dùng</span>
                         </a>
                     </li>
 
-                    <li id="removable">
-                        <a class="has-arrow" href="#" aria-expanded="false"><i class="icon nalika-new-file icon-wrap"></i> <span class="mini-click-non">Pages</span></a>
-                        <ul class="submenu-angle" aria-expanded="false">
-                            <li><a title="Register" href="register.html"><span class="mini-sub-pro">Register</span></a></li>
-                            <li><a title="Lock" href="lock.html"><span class="mini-sub-pro">Lock</span></a></li>
-                            <li><a title="Password Recovery" href="password-recovery.html"><span class="mini-sub-pro">Password Recovery</span></a></li>
-                            <li><a title="Password Recovery" href="?c=dashboard&d=logout"><span class="mini-sub-pro">Logout</span></a></li>
-                        </ul>
+                    <li class="active">
+                        <a  href="<?php echo DOCUMENT_PATH?>">
+                            <span class="mini-click-non">Quản lý tài liệu</span>
+                        </a>
                     </li>
+
+                    <li><a title="Password Recovery" href="?c=dashboard&d=logout"><span class="mini-sub-pro">Logout</span></a></li>
                 </ul>
             </nav>
         </div>

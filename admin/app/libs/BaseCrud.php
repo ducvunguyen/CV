@@ -8,16 +8,16 @@
         _urlShowDetail: null,
         _urlCreate: null,
         _urlStore: null,
-        _urlEdit: null,
+        _urlFormEdit: null,
         _urlUpdate: null,
         _urlDestroy: null,
 
-        init: function (urlLoadDataItem = null, urlShowDetail = null, urlCreate = null, urlStore = null, urlEdit = null, urlUpdate = null, urlDelete = null){
+        init: function (urlLoadDataItem = null, urlShowDetail = null, urlCreate = null, urlStore = null, urlFormEdit = null, urlUpdate = null, urlDelete = null){
             this._urlLoadDataItem = urlLoadDataItem;
             this._urlCreate = urlCreate;
             this._urlShowDetail = urlShowDetail;
             this._urlStore = urlStore;
-            this._urlEdit = urlEdit;
+            this._urlFormEdit = urlFormEdit;
             this._urlUpdate = urlUpdate;
             this._urlDestroy = urlDelete;
 
@@ -91,10 +91,44 @@
                 }
             });
         },
+        storeUploadFile(paramUrl = null){
+            let url = paramUrl;
+            if (paramUrl === null) url = this._urlStore;
+
+            let fileBase64;
+            // var formData = new FormData();
+            var dataUpload = {
+                nameFile: '',
+                fileBase64: ''
+            };
+            if ($('#file-document')[0].files.length > 0){
+                // formData.append('file', $('#'+file)[0].files[0]);
+                var reader = new FileReader();
+                reader.readAsDataURL($('#file-document')[0].files[0]);
+
+
+                reader.onload = function () {
+                    dataUpload.nameFile = $('#nameFile').val();
+                    dataUpload.fileBase64 = reader.result;
+                    $.ajax({
+                        url,
+                        type: 'POST',
+                        data: dataUpload,
+                        success: function (res){
+                            if (res == 0) toastr.error('Thêm thất bại');
+                            else {
+                                toastr.success('Thêm thành công');
+                                $('#modal-form').modal('hide');
+                                BaseCrud.loadDataItems();
+                            }
+                        }
+                    });
+                };
+            }
+        },
         destroy: function (id = null, paramUrl = null){
             if (id === null) return toastr.error('Id đang rỗng');
             let url = paramUrl;
-            console.log(paramUrl)
             if (paramUrl === null) url = this._urlDestroy;
             $.ajax({
                 url: url,
@@ -104,11 +138,45 @@
                     if (res == 0) return toastr.error('Xóa thất bại');
                     toastr.success('Xóa thành công');
                     BaseCrud.loadDataItems();
-
                 }, error: function (err){
                     toastr.error('Có lỗi xảy ra');
                 }
             })
+        },
+        showFormEdit(id = null, paramUrl = null){
+            if (id === null) return toastr.error('Id đang rỗng');
+            let url = paramUrl;
+            if (paramUrl === null) url = this._urlFormEdit;
+            $.ajax({
+               url: url,
+                type: 'POST',
+                data: {id},
+                success: function (res){
+                    $('#modal').html(res);
+                    $('#modal-form-edit').modal('show');
+                },error: function (err) {
+                   toastr.error('Có lỗi xảy ra !');
+                }
+            });
+        },
+        update(id = null, paramUrl = null){
+            if (id === null) return toastr.error('Id đang rỗng');
+            let url = paramUrl;
+            if (paramUrl === null) url = this._urlUpdate;
+            url = `${url}&id=${id}`;
+            $.ajax({
+               url,
+               type: 'POST',
+               data: $('#data-upload-form-update').serialize(),
+               success: function (res){
+                   if (res == 0) return toastr.error('Cập nhật thất bại');
+                   toastr.success('Cập nhật thành công');
+                   $('#modal-form-edit').modal('hide');
+                   BaseCrud.loadDataItems();
+               },error: function (err) {
+                    toastr.error('Có lỗi xảy ra !');
+                }
+            });
         }
     }
 </script>
